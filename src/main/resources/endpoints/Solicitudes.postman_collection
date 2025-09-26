@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "47b3b7a4-3a19-44e2-8f5b-5c06ab80e262",
+		"name": "Solicitudes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48760809",
+		"_collection_link": "https://karla-ramirez-e2108f06-2171592.postman.co/workspace/Karla's-Workspace~463e15c0-ff03-4e09-8c4d-946489375f95/collection/48760809-47b3b7a4-3a19-44e2-8f5b-5c06ab80e262?action=share&source=collection_link&creator=48760809"
+	},
+	"item": [
+		{
+			"name": "listar-solicitudes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/solicitudes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"solicitudes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ver-solicitud",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/solicitudes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"solicitudes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear-solicitud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Desarrollador Full Stack\",\r\n  \"estado\": \"En revisión\",\r\n  \"area\": \"Tecnología\",\r\n  \"pais\": \"Chile\",\r\n  \"localizacion\": \"Puente Alto\",\r\n  \"numVacantes\": 1,\r\n  \"descripcion\": \"Estoy interesado en la oferta laboral.\",\r\n  \"baseEduc\": \"Ingeniería en Informática\",\r\n  \"conocimExcluyente\": \"Java, Spring Boot, MySQL\",\r\n  \"rentaDesde\": 1500000,\r\n  \"rentaHasta\": 2000000,\r\n  \"modTrabajo\": \"Remoto\",\r\n  \"tipoServicio\": \"Outsourcing\",\r\n  \"nivelExperien\": \"Senior\",\r\n  \"fechaIniProyecto\": \"2025-10-15\",\r\n  \"usuarioId\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/solicitudes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"solicitudes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar-solicitud",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Desarrollador Full Stack\",\r\n  \"estado\": \"Pendiente\",\r\n  \"area\": \"Tecnología\",\r\n  \"pais\": \"Chile\",\r\n  \"localizacion\": \"La Florida\",\r\n  \"numVacantes\": 3,\r\n  \"descripcion\": \"Estoy interesado en la oferta laboral.\",\r\n  \"baseEduc\": \"Ingeniería en Informática\",\r\n  \"conocimExcluyente\": \"Java, Spring Boot, MySQL\",\r\n  \"rentaDesde\": 1500000,\r\n  \"rentaHasta\": 2000000,\r\n  \"modTrabajo\": \"Remoto\",\r\n  \"tipoServicio\": \"Outsourcing\",\r\n  \"nivelExperien\": \"Senior\",\r\n  \"fechaIniProyecto\": \"2025-10-15\",\r\n  \"usuarioId\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/solicitudes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"solicitudes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar-solicitud",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/solicitudes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"solicitudes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar-documentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/documentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"documentos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
