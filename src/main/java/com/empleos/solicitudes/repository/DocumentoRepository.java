@@ -1,4 +1,7 @@
 package com.empleos.solicitudes.repository;
 
-public interface DocumentoRepository {
+import com.empleos.solicitudes.model.Documento;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface DocumentoRepository extends JpaRepository<Documento, Integer> {
 }
