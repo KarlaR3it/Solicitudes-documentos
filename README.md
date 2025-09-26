@@ -2,7 +2,7 @@
 
 ## Descripción
 
-API RESTful desarrollada con Spring Boot para la gestión de solicitudes y documentos en un portal de empleos. La aplicación permite realizar operaciones CRUD sobre solicitudes de empleo y sus documentos asociados, proporcionando endpoints para crear, consultar, actualizar y eliminar registros.
+API RESTful desarrollada con Spring Boot para la gestión de solicitudes y documentos en un portal de empleos. La aplicación permite realizar operaciones CRUD sobre solicitudes de empleo y ver sus documentos asociados, proporcionando endpoints para crear, consultar, actualizar y eliminar registros.
 
 ## Tecnologías
 
