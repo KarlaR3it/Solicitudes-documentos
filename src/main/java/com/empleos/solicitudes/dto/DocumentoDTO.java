@@ -7,5 +7,10 @@ public class DocumentoDTO {
     private Integer id;
     private String extension;
     private String nombreArchivo;
-    private Integer solicitudId;
+    @Data
+    public static class SolicitudDTO {
+        private Integer id;
+    }
+    
+    private SolicitudDTO solicitud;
 }

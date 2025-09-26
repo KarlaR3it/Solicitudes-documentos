@@ -17,10 +17,7 @@ public class Documento {
     private String extension;
     private String nombreArchivo;
     
-    @Column(name = "solicitud_id")
-    private Integer solicitudId;
-    
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "solicitud_id", insertable = false, updatable = false)
+    @JoinColumn(name = "solicitud_id")
     private Solicitud solicitud;
 }

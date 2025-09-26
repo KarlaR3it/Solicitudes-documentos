@@ -62,9 +62,28 @@ La aplicación estará disponible en `http://localhost:8080`
 
 ## Endpoints principales
 
-- **Solicitudes**: `/api/solicitudes`
-- **Documentos**: `/api/documentos`
+- **Solicitudes**: `http://localhost:8080/api/v1/solicitudes`
+- **Documentos**: `http://localhost:8080/api/v1/documentos`
 
-La aplicación genera automáticamente las tablas en la base de datos al iniciar.
+## Colección de Postman
+
+1. La colección está en `src/main/resources/endpoints/Solicitudes.postman_collection`.
+2. Para importarla en Postman: `Import` > selecciona ese archivo.
+
+## Nota: poblar tablas automáticamente
+
+Si quieres poblar las tablas automáticamente al iniciar la aplicación, edita `src/main/resources/application.properties`:
+
+- Comenta esta línea (si está activa):
+  ```properties
+  spring.jpa.hibernate.ddl-auto=update
+
+- Descomenta estas tres líneas (ya están en el archivo como comentario):
+```properties
+spring.jpa.hibernate.ddl-auto=none
+spring.sql.init.schema-locations=classpath:sql/Script-insert.sql
+spring.sql.init.mode=always
+```
 
 
+Luego reinicia la aplicación para que se ejecuten los scripts de inicialización.
