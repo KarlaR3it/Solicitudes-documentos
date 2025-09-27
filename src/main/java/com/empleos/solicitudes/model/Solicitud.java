@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "solicitudes")
@@ -31,4 +32,7 @@ public class Solicitud {
     private String nivelExperien;
     private LocalDate fechaIniProyecto;
     private Integer usuarioId;
+    
+    @OneToMany(mappedBy = "solicitud", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Documento> documentos;
 }
