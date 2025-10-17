@@ -1,5 +1,6 @@
 package com.empleos.solicitudes.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,5 +35,6 @@ public class Solicitud {
     private Integer usuarioId;
     
     @OneToMany(mappedBy = "solicitud", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Documento> documentos;
 }

@@ -1,5 +1,6 @@
 package com.empleos.solicitudes.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,5 +20,6 @@ public class Documento {
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "solicitud_id")
+    @JsonBackReference
     private Solicitud solicitud;
 }

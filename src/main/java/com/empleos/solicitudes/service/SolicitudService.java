@@ -19,6 +19,7 @@ public class SolicitudService {
         this.solicitudRepository = solicitudRepository;
         this.modelMapper = modelMapper;
     }
+    
     //save
     public SolicitudDTO save(SolicitudDTO solicitudDTO) {
         Solicitud solicitud = modelMapper.map(solicitudDTO, Solicitud.class);
@@ -33,6 +34,7 @@ public class SolicitudService {
                 }
         ).collect(Collectors.toList());
     }
+
     //find by id
     public Optional<SolicitudDTO> findById(Integer id){
         return solicitudRepository.findById(id).map(

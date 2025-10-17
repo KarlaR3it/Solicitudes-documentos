@@ -16,10 +16,12 @@ public class SolicitudController {
     public SolicitudController(SolicitudService solicitudService) {
         this.solicitudService = solicitudService;
     }
+
     @PostMapping
     public ResponseEntity<SolicitudDTO> save(@RequestBody SolicitudDTO solicitudDTO){
         return new ResponseEntity<>(solicitudService.save(solicitudDTO), HttpStatus.CREATED);
     }
+
     @GetMapping
     public ResponseEntity<List<SolicitudDTO>> findAll(){
         List<SolicitudDTO> solicitudDTOS = solicitudService.findAll();
@@ -28,6 +30,7 @@ public class SolicitudController {
         }
         return ResponseEntity.ok(solicitudDTOS);
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<SolicitudDTO> finById(@PathVariable Integer id){
         return  solicitudService.findById(id).map(
@@ -35,12 +38,14 @@ public class SolicitudController {
         ).orElseGet(()-> ResponseEntity.notFound().build()
         );
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteById(@PathVariable Integer id){
         if(solicitudService.deleteById(id))
             return ResponseEntity.noContent().build();
         return ResponseEntity.notFound().build();
     }
+    
     @PutMapping("/{id}")
     public ResponseEntity<SolicitudDTO> update(@PathVariable Integer id, @RequestBody SolicitudDTO solicitudDTO){
         solicitudDTO.setId(id);
